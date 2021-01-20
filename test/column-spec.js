@@ -2,7 +2,7 @@ const expect = require('chai').expect;
 const { badSolution, goodSolution } = require('../solutions/grids.js');
 
 describe('Individual Column Checker', () => {
-  const checkColumn = require('../checkers/column-checker.js');
+  const { checkColumn } = require('../checkers/column-checker.js');
   
   it('Should return a boolean', () => {
     expect(checkColumn(badSolution, 1)).to.be.a('boolean');
