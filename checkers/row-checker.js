@@ -1,13 +1,18 @@
-const checkRow = (grid, rowNumber) => {
-  let flag = true;
+const { base } = require('./helpers/base-counter.js');
 
-  return flag;
+const checkRow = (grid, rowNumber) => {
+  const rowContents = grid[rowNumber - 1].reduce((total, current) => {
+    total[current]++;
+    return total;
+  }, Object.assign({}, base));
+
+  return Math.max(...Object.values(rowContents)) === 1 ? true : false;
 };
 
 const checkAllRows = (grid) => {
-  let flag = true;
+  const results = grid.map((row, rowNumber) => checkRow(grid, rowNumber + 1));
 
-  return true;
+  return !results.includes(false);
 };
 
 module.exports = {
