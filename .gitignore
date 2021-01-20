@@ -1,2 +1,6 @@
+## node modules and package-lock.json
 /node_modules
 package-lock.json
+
+## helpers that help with testing in IDE
+copied-imports.js
