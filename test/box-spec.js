@@ -25,11 +25,11 @@ describe('All Boxes Checker', () => {
     expect(checkAllBoxes(badSolution)).to.be.a('boolean');
   });
 
-  it('Should return true for grids with each box containing entirely unique numbers', () => {
+  it('Should return true for grids with each 3x3 box containing entirely unique numbers', () => {
     expect(checkAllBoxes(goodSolution)).to.be.true;
   });
 
-  it('Should return false for grids containing one or more incorrect boxes', () => {
+  it('Should return false for grids containing one or more incorrect 3x3 box', () => {
     expect(checkAllBoxes(badSolution)).to.be.false;
   });
 });
