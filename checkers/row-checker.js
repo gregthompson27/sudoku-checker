@@ -1,12 +1,7 @@
-const { base } = require('./helpers/base-counter.js');
+const { counter } = require('./helpers/base-obj.js');
 
 const checkRow = (grid, rowNumber) => {
-  const rowContents = grid[rowNumber - 1].reduce((total, current) => {
-    total[current]++;
-    return total;
-  }, Object.assign({}, base));
-
-  return Math.max(...Object.values(rowContents)) === 1 ? true : false;
+  return counter(grid[rowNumber - 1]);
 };
 
 const checkAllRows = (grid) => {
